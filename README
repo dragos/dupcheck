@@ -1,4 +1,4 @@
-== dupcheck ==
+# dupcheck
 
 This tool can do two things: find duplicate methods/fields in a Java
 classfile, and print members, descriptors and Java 5 signatures.
@@ -9,17 +9,17 @@ bisect run.
 
 Create a simple bash script to run it:
 
-#!/bin/bash
-gscala -cp /Users/dragos/Documents/workspace/dupcheck/classes scala.tools.dupcheck.Main $*
+       #!/bin/bash
+       gscala -cp /Users/dragos/Documents/workspace/dupcheck/classes scala.tools.dupcheck.Main $*
 
 then
 
-dupcheck -d classes/Foo.class
+        dupcheck -d classes/Foo.class
 
 to check for duplicates,
 
 or 
 
-dupcheck -p classes/Foo.class
+   dupcheck -p classes/Foo.class
 
 to print Foo's members.
