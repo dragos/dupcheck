@@ -1,0 +1,25 @@
+== dupcheck ==
+
+This tool can do two things: find duplicate methods/fields in a Java
+classfile, and print members, descriptors and Java 5 signatures.
+
+If it encounters an error (like double field definition), it exists
+with exit code 1, otherwise 0. This makes it easy to use in a git
+bisect run.
+
+Create a simple bash script to run it:
+
+#!/bin/bash
+gscala -cp /Users/dragos/Documents/workspace/dupcheck/classes scala.tools.dupcheck.Main $*
+
+then
+
+dupcheck -d classes/Foo.class
+
+to check for duplicates,
+
+or 
+
+dupcheck -p classes/Foo.class
+
+to print Foo's members.

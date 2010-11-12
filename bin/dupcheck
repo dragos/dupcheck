@@ -1,0 +1,2 @@
+#!/bin/bash
+gscala -cp /Users/dragos/Documents/workspace/dupcheck/classes scala.tools.dupcheck.Main $*
